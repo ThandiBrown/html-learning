@@ -1,0 +1,96 @@
+<!-- you can validate your HTML file at: https://validator.w3.org -->
+<!-- defines the page as a HTML doc to the browser -->
+<!DOCTYPE html>
+<!-- defines the language of the page -->
+<html lang="en">
+<!-- head: metadata about the page not seen by the user -->    
+<head>
+    <!-- defines the character encoding for the page -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Thandiwe Brown">
+    <!-- alt-z is used to wrap the code -->
+    <meta name="description" content="This page contains information on html code">
+    <title>The Webpage Title</title>
+    <!-- often used to link external site stylesheets or favorite icons -->
+    <link rel="icon" href="1.jpg" type="image/x-icon">
+    <!-- linking the css stylesheet -->
+    <link rel="stylesheet" href="main.css" type="text/css">
+    
+</head>
+
+<body>
+    <h1>I'm a big heading</h1>
+    <h2>I'm a slightly less big heading</h2>
+    <!-- Creates a horizontal line break -->
+    <hr>
+    <!-- HTML uses white pace collapsing. If you have extra trailing spaces, it will not show on the resulting browser page -->
+    <p>This line is going to 
+        <!-- line break -->
+        <br>
+        break
+    </p>
+    <!-- em is an emphasis element. It is also an in-line element meaning it is not force the element to start a new line. paragraph is a block element so it does cause a break -->
+    <p>This is an <em>in-line element</em></p>
+    <p>This is an <abbr title="hover text">in-line element</abbr></p>
+    <h3>This is <p>not an in-line element</p></h3>
+    <!-- entities are used to display reserved characters -->
+    <p>I am a space entity: &nbsp;&nbsp;&nbsp;&nbsp;.</p>
+    <p>I am a less than / greater than entity: &lt; / &gt;.</p>
+    
+    <address>
+        111 FakeAddress<br>
+        FakeCity, II 89098
+    </address>
+
+    <!-- TODO: Remember comments are visible to the public via Inspect! -->
+
+    <ol>
+        <li>Ordered List</li>
+    </ol>    
+    <ul>
+        <li>Unordered List</li>
+    </ul>
+    <!-- description list -->
+    <dl>
+        <!-- description term -->
+        <dt>North Pole</dt>
+        <!-- description details -->
+        <dd>I hear this is <strong>cold</strong>!</dd>        
+        <dt>South Pole</dt>
+        <dd>This is also cold</dd>
+        <dt>Mountaintops</dt>
+        <dd>These are also cold</dd>
+        
+    </dl>
+
+    <!-- Links -->
+    <!-- anchor tag: used for creating links to other pages on the web or within a HMTL page 
+    when the link is a full address, it is called an absolute reference (versus a relative reference to a file within the same server/project)-->
+    <a href="https://www.youtube.com/watch?v=kUMe1FH4CHE&list=PLwGxckpz8RvL6x4XkGdtdGi2SdtmgRkQY&index=4&t=7773s&ab_channel=freeCodeCamp.org"> Link to a good tutorial</a>
+    <br>
+    <!-- relative reference -->
+    <a href="about.html">Author About Page</a>    
+    <br>
+    <!-- internal reference -->
+    <a href="#id_tag">Referencing within page</a>
+    <div id="id_tag"></div>    
+    <br>
+    <a href="#">This will take me to the top of the page</a>
+    
+
+    <!-- Download Link -->
+    <p>Download the <a href="1.jpg" download>favicon</a></p>
+    <!-- e-mail - this is no longer advised since it can be easily scraped -->
+    <p>Contact me at <a href="mailto:fakemail@gmail.com">my email address</a></p>
+    <!-- number -->
+    <p>Contact me at <a href="tel:+1234567890@gmail.com">my phone number</a></p>    
+    <!-- open in a new tab -->
+    <p>Open <a href="https:www.google.com/" target="blank">Google</a> in a new tab</p>
+    
+
+    <!-- semantic HTML elements -->
+    <nav></nav>
+    <section></section>
+    
+</body>
+</html>
