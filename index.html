@@ -12,7 +12,7 @@
     <meta name="description" content="This page contains information on html code">
     <title>The Webpage Title</title>
     <!-- often used to link external site stylesheets or favorite icons -->
-    <link rel="icon" href="1.jpg" type="image/x-icon">
+    <link rel="icon" href="images/1.jpg" type="image/x-icon">
     <!-- linking the css stylesheet -->
     <link rel="stylesheet" href="main.css" type="text/css">
     
@@ -79,18 +79,172 @@
     
 
     <!-- Download Link -->
-    <p>Download the <a href="1.jpg" download>favicon</a></p>
+    <p>Download the <a href="images/1.jpg" download>favicon</a></p>
     <!-- e-mail - this is no longer advised since it can be easily scraped -->
     <p>Contact me at <a href="mailto:fakemail@gmail.com">my email address</a></p>
     <!-- number -->
     <p>Contact me at <a href="tel:+1234567890@gmail.com">my phone number</a></p>    
     <!-- open in a new tab -->
     <p>Open <a href="https:www.google.com/" target="blank">Google</a> in a new tab</p>
-    
+  
 
-    <!-- semantic HTML elements -->
+    <!-- 
+        alt:
+        helps with accessibility. A place to put the description for the image
+        if the image can't be found, this description will show in it's place
+        title:
+        not accessible/won't be read by screen reader
+        complementary text/not necessary. Can be read by hovering
+        why you should provide the width and the height even though they may be overridden by CSS:
+        cumulative layout shift - banner or pop-up ads may shift around conteent and cause the user to click on something they didn't mean to. By providing the width and height in html, you will provide the browser with some idea of the space it will take up and cause less of this shifting
+     -->
+    <img src="images/1.jpg" alt="Spongebob Photograph" title="Spongebob is Happy" width="300px" height="300px">
+    <!-- lazy loading means that if the image does not appear on the loaded screen (meaning it's further down the page once you scroll), the browser will not generate the image until the user is scrolling down and about to see the image 
+    - it's good to put this tag when you know the image will not be on the starting page-->
+    <img src="images/2.jpg" alt="Spongebob Photograph" width="300px" height="169px" loading="lazy">
+
+    <!-- items inside of figure are naturally indented. This can be changed in CSS -->
+    <figure>
+        <img src="images/3.jpg" alt="Spongebob Black-and-white" width="300px" height="300px" loading="lazy">
+        <!-- signifies that this caption is related to this particular image -->
+        <figcaption>
+            Spongebob looks creepy here.
+        </figcaption>
+    </figure>
+
+    <!-- figures are not just for images -->
+    <figure>
+        <figcaption>
+            An example of Python code
+        </figcaption>
+        <p>
+            <code>
+                x = max(5, 3) + y
+            </code>
+        </p>
+    </figure>
+
+      
+
+    <!-- 
+        semantic HTML elements
+        this helps you quickly read the different sections of an HTML page and navigate to those sections
+     -->
+    <!-- ideally one per page -->
+    <h1></h1>
+    <!-- ideally as subsections -->
+    <h2></h2>
+    <h3></h3>
+
+    <!-- a grouping of links -->
     <nav></nav>
+
+    <!-- horizontal rule - signifies a topic change -->
+    <hr>
+
+    <!-- signifies a new section -->
     <section></section>
+
+    <header>
+        <h1></h1>
+        <!-- navigation bars can exist in the header and footer (or multiple places in the page, so it is good to label them for accessibility) -->
+        <nav aria-label="primary-navigation"></nav>
+    </header>
+
+    <main>
+        <section></section>
+        <!-- article may be used over section if that area has a clear topic while a section is more general -->
+        <article></article>
+    </main>
+
+    <!-- content indirectly related to the documents main context;
+    related to the primary content but does not constitute the primary content -->
+    <aside>
+        <details>
+            <!-- hides the information within the details tag, under its content -->
+            <summary>
+                Guess the number of hours I code per day
+            </summary>
+            <p> 10 hours </p>
+            <p> 10 hours </p>
+            <p> 10 hours </p>
+            <p> 10 hours </p>
+        </details>
+        <p>This is <mark> highlighted </mark> text</p>
+        <!-- does not affect but helps with accessibility and for the browser's awareness -->
+        <p>It is <time datetime="08:00">8 am</time>. It will be 11 am in <time datetime="PT3H">3 hours</time>.</p>
+    </aside>
+
+    <footer>
+        <p>&copy;MyName</p>
+        <a href="#">Back to Top</a>
+    </footer>
+
+    <!-- best to use these when no other semantic tags work -->
+    <!-- Stands for divider
+    no semantic meaning
+    block level element -->
+    <div></div>    
+    <!-- 
+    no semantic meaning
+    inline level element -->
+    <span></span>
+
+    <br>
+    <!-- the table does not take up the full width of the page like a traditional block element. It only takes up the the amount of space needed for its content -->
+    <table>
+        <!-- table row -->
+        <tr>
+            <!-- table data -->
+            <td>
+                <time datetime="08:00">8am</time>-<time datetime="11:00">11am</time>
+            </td>
+            <td>Write Code</td>
+        </tr>
+        <tr>
+            <!-- table data -->
+            <td>
+                <time datetime="11:00">11am</time>-<time datetime="12:00">12pm</time>
+            </td>
+            <td>Eat Lunch</td>
+        </tr>        
+        <tr>
+            <!-- table data -->
+            <td>
+                <time datetime="12:00">12pm</time>-<time datetime="17:00">5pm</time>
+            </td>
+            <td>Study</td>
+        </tr>
+    </table>
     
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
