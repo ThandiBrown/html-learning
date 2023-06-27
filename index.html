@@ -193,30 +193,74 @@
     <br>
     <!-- the table does not take up the full width of the page like a traditional block element. It only takes up the the amount of space needed for its content -->
     <table>
-        <!-- table row -->
-        <tr>
-            <!-- table data -->
-            <td>
-                <time datetime="08:00">8am</time>-<time datetime="11:00">11am</time>
-            </td>
-            <td>Write Code</td>
-        </tr>
-        <tr>
-            <!-- table data -->
-            <td>
-                <time datetime="11:00">11am</time>-<time datetime="12:00">12pm</time>
-            </td>
-            <td>Eat Lunch</td>
-        </tr>        
-        <tr>
-            <!-- table data -->
-            <td>
-                <time datetime="12:00">12pm</time>-<time datetime="17:00">5pm</time>
-            </td>
-            <td>Study</td>
-        </tr>
+        <!-- accessibility. Describe what the table is about -->
+        <caption>My Daily Schedule</caption>
+        <!-- does not change user's view but good for semantics -->
+        <thead>
+            <tr>
+                <!-- table header
+                headers are naturally centered and bolded -->
+                
+                <th>&nbsp;</th> <!-- this allows for the first column -->
+                <!-- scope signifies how the table header relates to the table -->
+                <th scope="col">Time</th>
+                <th scope="col">Activity</th>
+            </tr>
+        </thead>
+        
+        
+        <!-- does not change user's view but good for semantics -->
+        <tbody>
+            <!-- table row -->
+            <tr>
+                <!-- this th is a part of the first column
+                it is the row heading/title so it is good to define that semantically -->
+                <th scope="row">Morning</th>
+                <!-- table data -->
+                <td>
+                    <time datetime="08:00">8am</time>-<time datetime="11:00">11am</time>
+                </td>
+                <td>Write Code</td>
+            </tr>
+            <tr>
+                <th scope="row">Break</th>
+                <!-- table data -->
+                <td>
+                    <time datetime="11:00">11am</time>-<time datetime="12:00">12pm</time>
+                </td>
+                <td>Eat Lunch</td>
+            </tr>
+            <tr>
+                <th scope="row">Afternoon</th>
+                <!-- table data -->
+                <td>
+                    <time datetime="12:00">12pm</time>-<time datetime="17:00">5pm</time>
+                </td>
+                <td>Study</td>
+            </tr>
+            <tr>
+                <th scope="row">Afternoon</th>
+                <td colspan="2">Free Time</td>
+            </tr>
+            <tr>
+                <th scope="row">Evening</th>
+                <td rowspan="2">All Other Times</td>
+                <td >Free Time</td>
+            </tr>
+            <tr>
+                <th scope="row">Night</th>
+                <td>Sleep</td>
+            </tr>        
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">That's what I do every day</td>
+            </tr>
+        </tfoot>
     </table>
     
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 </body>
 </html>
 
