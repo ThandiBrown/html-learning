@@ -258,6 +258,125 @@
             </tr>
         </tfoot>
     </table>
+
+
+    <hr>
+    <!-- forms and inputs
+    allows us to collect information from users -->
+    <article>
+        <h2>Contact</h2>
+        <form action="https://httpbin.org/get" method="get">
+            <label for="firstName">First Name:</label>
+            <!-- good to match the name and id 
+            id absolutely needs to match the for attribute in label
+            the name attribute signifies the name of this information on the server level/once it is sent to the server-->
+            <input type="text" name="firstName" id="firstName">
+            <br>
+            <!-- required requires input before submitting the form -->
+            <input type="text" placeholder="This is placeholder text" required>
+            <br>
+            <!-- suggest previously entered inputs -->
+            <input type="text" autocomplete="on">
+            <br>
+            <!-- puts the focus on this input when the page loads -->
+            <input type="text" autofocus>
+            <!-- you can place an input inside of a block elemment to cause a line break -->
+            <p>
+                <label for="lastName" name="lastName">Last Name:</label>
+                <input type="text">
+            </p>
+            <!-- password input type -->
+            <p>
+                <label for="password" name="password">Password:</label>
+                <input type="password" required>
+            </p>
+            <p>
+                <label for="phone" name="phone">Phone Number:</label>
+                <!--tel on mobile will bring up the numberic pad
+                pattern excepts regex pattern-->
+                <input type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
+            </p>            
+            <p>
+                <label for="decade" name="decade">Favorite Decade:</label>
+                <!--number creates up-and-down arrows-->
+                <input type="number" min="1950" max="2020" step="10" value="1980">
+            </p>
+            <p>
+                <label for="coffee"> Favorite Coffee</label>
+                <!-- naturally causes drop-down arrow list 
+                size attribute shows how many items are shown in the window before scrolling is needed
+                multiple means that you can select multiple choices-->
+                <select name="coffee" id="coffee" size="5" multiple>
+                    <option value="regular">Regular</option>
+                    <!-- causes this option to be displayed by default -->
+                    <option value="iced" selected>Iced</option>
+                    <!-- creates titles for the options -->
+                    <optgroup label="Coffees">
+                        <option value="a">Coffee A</option>
+                        <option value="b">Coffee B</option>
+                    </optgroup>
+                </select>            
+            <p>
+                <label for="coffee"> Favorite Coffee</label>
+                <!-- list attribute -->
+                <input type="text" list="coffee-list">
+                <!-- creates a suggested drop-down as you type -->
+                <datalist id="coffee-list">
+                    <option value="coffee">
+                    <option value="latte">
+                    <option value="espresso">
+                    <option value="cortado">
+                    <option value="americano">
+                    <option value="other">
+                </datalist>
+            </p>
+
+
+            <!-- creates a section for your form (outline) -->
+            <fieldset>
+                <!-- a caption describing your form -->
+                <legend>What is your favorite food?</legend>
+                <p>
+                    <!-- radio buttons in the same radio group (determined by name="food") are deselected when another button in the same group is selected -->
+                    <input type="radio" name="food" value="tacos">
+                    <label for="tacos">Tacos</label>
+                </p>
+                <p>
+                    <input type="radio" name="food" value="pizza">
+                    <label for="pizza">Pizza</label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <!-- a caption describing your form -->
+                <legend>Do you have pets?</legend>
+                <p>
+                    <input type="checkbox" name="pets" value="dog">
+                    <label for="dog">Dog</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="pets" value="fish">
+                    <label for="fish">Fish</label>
+                </p>
+            </fieldset>            
+            <fieldset>
+                <!-- a caption describing your form -->
+                <legend>Send Me a Note</legend>
+                <p>
+                    <label for="message">Your Message</label>
+                    <br>
+                    <textarea name="message" cols="30" rows="10" placeholder="Type your message here"></textarea>
+                </p>
+            </fieldset>
+            <!-- Button element is more semantic -->
+            <input type="submit" value="I show up on the button">
+            <!-- caution with get request because the information shows up in the URL -->
+            <button type="submit">Submit</button>
+            <!-- You can have more than one submit button
+            formaction allows you to send the information to a different location -->
+            <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+            <button type="reset">Reset</button>
+        </form>
+    </article>
     
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
